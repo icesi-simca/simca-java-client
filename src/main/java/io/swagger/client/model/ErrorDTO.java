@@ -26,10 +26,13 @@ import java.io.IOException;
 /**
  * ErrorDTO
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-18T23:27:07.769-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-19T00:57:09.000-05:00")
 public class ErrorDTO {
   @SerializedName("error")
   private String error = null;
+
+  @SerializedName("errorCode")
+  private Integer errorCode = null;
 
   public ErrorDTO error(String error) {
     this.error = error;
@@ -49,6 +52,24 @@ public class ErrorDTO {
     this.error = error;
   }
 
+  public ErrorDTO errorCode(Integer errorCode) {
+    this.errorCode = errorCode;
+    return this;
+  }
+
+   /**
+   * Error code
+   * @return errorCode
+  **/
+  @ApiModelProperty(value = "Error code")
+  public Integer getErrorCode() {
+    return errorCode;
+  }
+
+  public void setErrorCode(Integer errorCode) {
+    this.errorCode = errorCode;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -59,12 +80,13 @@ public class ErrorDTO {
       return false;
     }
     ErrorDTO errorDTO = (ErrorDTO) o;
-    return Objects.equals(this.error, errorDTO.error);
+    return Objects.equals(this.error, errorDTO.error) &&
+        Objects.equals(this.errorCode, errorDTO.errorCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(error);
+    return Objects.hash(error, errorCode);
   }
 
 
@@ -74,6 +96,7 @@ public class ErrorDTO {
     sb.append("class ErrorDTO {\n");
     
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
+    sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }

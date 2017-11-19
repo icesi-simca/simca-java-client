@@ -29,7 +29,7 @@ import org.joda.time.DateTime;
 /**
  * MeasurementDTO
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-18T23:27:07.769-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-19T00:57:09.000-05:00")
 public class MeasurementDTO {
   @SerializedName("date")
   private DateTime date = null;
